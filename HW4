@@ -1,0 +1,35 @@
+package sample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        // Литр топлива = 1.2$. Автомобиль тратит 8 литров на 100км. Вы собрались в поездку в соседний город, расстояние 120км. 
+		// Вычислить и вывести на экран сколько нужно заплатить за топливо для поездки.
+		
+		// Стоимость литра топлива
+		
+        double fuelPricePerLiter = 1.2;
+
+        // Расход топлива (в литрах на 100 км)
+        
+        double fuelConsumptionPer100Km = 8.0;
+
+        // Расстояние до пункта назначения (в километрах)
+        
+        double distanceInKm = 120.0;
+
+        // Вычисление количества литров топлива для поездки
+        
+        double litersRequired = (fuelConsumptionPer100Km / 100.0) * distanceInKm;
+
+        // Вычисление стоимости топлива для поездки
+        
+        double totalCost = litersRequired * fuelPricePerLiter;
+
+        // Вывод результата
+        
+        System.out.println("Стоимость топлива для поездки: $" + totalCost);
+	}
+
+}
