@@ -1,0 +1,26 @@
+package sample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+                // Яблоко стоит 2$. Покупатель приобрел 6 шт. Вычислить сумму которую должен уплатить покупатель за покупку.
+		
+		// Стоимость одного яблока
+		
+		int costPerApple = 2;
+		
+		// Количество приобретенных яблок
+		
+		int numberOfApples = 6;
+		
+		// Вычисление общей суммы покупки
+		
+		int totalCost = costPerApple * numberOfApples;
+		
+		//Выведем сумму денег за покупку 6 яблок.
+		
+		System.out.println(totalCost + " $");
+	}
+
+}
