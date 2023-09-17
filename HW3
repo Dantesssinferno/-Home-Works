@@ -1,0 +1,27 @@
+package sample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Вычислить площадь треугольника по формуле Герона. Стороны треугольника A = 0.3, B = 0.4, C = 0.5. Вывести на экран площадь. 
+                // Длины сторон треугольника
+		
+    double sideA = 0.3;
+    double sideB = 0.4;
+    double sideC = 0.5;
+            
+                // Расчитаем для начала полупериметр p = (a + b + c)/2.0.
+    
+    double p = (sideA + sideB + sideC)/2.0;
+    
+                // Расчитаем площадь треугольника по формуле Герона
+                // Формула Герона S = √(p * (p - a) * (p - b) * (p - c)).
+    
+    double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+    
+                // Вывод результата расчетов
+    
+    System.out.println("Площадь треугольника = " + area);
+	}
+}
