@@ -28,5 +28,7 @@ public class Main {
         		countOdd++;
         	}
         }
-        System.out.println("Number of odd numbers =" + countOdd);
+        System.out.println("Number of odd numbers = " + countOdd);
 	}
+
+}
