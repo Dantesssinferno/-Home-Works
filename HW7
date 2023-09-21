@@ -1,0 +1,22 @@
+package sample;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Напечатайте таблицу умножения на 5. Например так: 1 x 5 = 5 и т.д.
+		
+		Scanner sc = new Scanner(System.in);
+		int a;
+		int b = 5;
+		System.out.println("Enter  number a");
+		a = sc.nextInt();
+		
+		
+		
+			for (int i = a; i <= 10; i++) {
+			int result = i * b;
+			System.out.println(i + " X " + b + " = " + result);
+			} 	
+		} 		
+		}		
