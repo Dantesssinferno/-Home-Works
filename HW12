@@ -1,0 +1,44 @@
+package sample;
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+
+	public static void main(String[] args) {
+		/* Вводится строка из слов, разделенных пробелами. Найти самое длинное слово и вывести его на
+		   экран.
+		*/ 
+		//Создаю переменную типа string и сканер
+		
+		Scanner sc = new Scanner (System.in);
+		String text;
+		
+		//Считываю с клавиатуры с помощью сканера вводимые данные
+		
+		System.out.println("Input your text");
+		text = sc.nextLine();
+		
+		//Применяю метод split для разбиения строки при помощи reg.exp. и получаю данные из массива
+		
+		String[] wordLenght = text.split("[ ]");
+		System.out.println(Arrays.toString(wordLenght));
+		
+		//Создаю переменную для хранения самого длинного слова
+		
+		String longestWord = "";
+		
+		//Перебираю слова в строке для нахождения самого длинного слова
+		
+		for (String word : wordLenght) {
+			if (word.length() > longestWord.length()) {
+				longestWord = word;
+			}
+		}
+		
+        //Вывожу самое длинное слово
+		
+		System.out.println("The longest word = " + longestWord);
+
+	
+	}
+
+}
