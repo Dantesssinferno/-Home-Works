@@ -1,0 +1,35 @@
+package sample;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// Считайте строку текста с клавиатуры. Подсчитайте сколько раз в нем встречается символ «b».
+		
+		//Создаю переменную типа string и сканер и переменную для счета количества символов "b".
+		
+		Scanner sc = new Scanner(System.in);
+		String text;
+		int count =0;
+		
+        System.out.println("Imput text");
+        text = sc.nextLine();
+        
+        //Привидем строку в нижний регистр
+        
+        String tempText = text.toLowerCase();
+        
+        //Получим массив введенных символов с клавиатуры
+        
+        char[] simbols = tempText.toCharArray();
+        
+        for (int i = 0; i < simbols.length; i++) {
+        	if (simbols[i] == 'b') {
+            	count++;
+            }        	
+        }
+        
+        
+        System.out.println("Number of characters \"b\" =" + count);
+	}
+
+}
