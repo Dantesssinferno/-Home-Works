@@ -1,0 +1,53 @@
+package sample;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+
+		//Напишите метод который вернет максимальное число из массива целых чисел.
+		
+		//Объявляем сканер для считывания значений массива с клавиатуры
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Imput elements of arrey");
+	    
+	  //Создаем переменную для считывания размера с клавиатуры
+		
+		int size = sc.nextInt();
+		
+		//Создаем переменную для считывания элементов массива с клавиатуры
+		
+		int[] array= new int [size];
+		
+		//Заполнение массива вручную
+		
+		System.out.println ("What elements should be contained in the array?");
+
+        for (int i = 0; i < size; i++) {
+			
+			System.out.println("Number " + (i+1) + ": ");
+			array [i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(array));
+		
+		//Создаю переменную для подбора максимального значения из массива. Вызываю метод который вычислил максимальное значение из массива
+		
+		
+		int maximum = findMax(array);		
+		System.out.println("Maximum element is = " + maximum);
+		
+	}
+
+	public static int findMax(int[] array) {
+		int currentMax = array[0];
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] > currentMax) {
+				currentMax = array[i];
+			}
+		}
+		return currentMax;
+	}
+
+}
