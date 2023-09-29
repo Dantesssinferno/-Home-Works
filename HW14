@@ -1,0 +1,43 @@
+package sample;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		/*  Напишите метод который реализует линейный поиск элемента в массиве целых чисел. Если такой
+		элемент в массиве есть то верните его индекс, если нет то метод должен возвращать число - «-1». 
+		*/
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Input sequince size");
+		
+		int size = sc.nextInt();
+		int[] array = new int [size];
+		
+		for (int i = 0; i < size; i++) {
+			
+			System.out.println("Number " + (i+1) + ": ");
+			
+			array [i] = sc.nextInt();
+		}
+		System.out.println(Arrays.toString(array));
+		
+       
+		System.out.println("Input element for serch");
+		
+		int element = sc.nextInt();
+
+		System.out.println(linearSearch(array, element));
+
+	}
+
+	public static int linearSearch(int[] array, int element) {
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == element) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+}
