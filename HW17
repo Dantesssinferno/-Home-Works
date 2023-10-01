@@ -1,0 +1,44 @@
+package sample;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void saveArrayToFile(int[][] array, String fileName) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            int numRows = array.length;
+            int numCols = array[0].length;
+
+            // Записываем размеры массива в файл
+            
+            writer.write("numRows = " + numRows + " numCols = " + numCols );
+            writer.newLine();
+
+            // Записываем элементы массива в файл
+            
+            for (int i = 0; i < numRows; i++) {
+                for (int j = 0; j < numCols; j++) {
+                    writer.write(array[i][j] + " ");
+                }
+             // Переходим на следующую строку
+                writer.newLine(); 
+            }
+
+            System.out.println("Two-dimensional array successfully saved to file: " + fileName);
+        } catch (IOException e) {
+            System.err.println("Error saving file: " + e.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+    	
+        // Пример использования метода
+    	
+        int[][] exampleArray = {
+            {1, 2, 3, 4},
+            {4, 5, 6, 5},
+            {7, 8, 9, 10},
+        };
+        saveArrayToFile(exampleArray, "TestFile.txt");
+    }
+}
